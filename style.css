@@ -1,0 +1,790 @@
+@import url('https://fonts.googleapis.com/css2?family=GFS+Didot&display=swap');
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'GFS Didot', serif;
+}
+
+
+header{
+    background-color: black;
+    color: #fff;
+}
+
+header,
+nav,    
+ul{
+    display:flex;
+}
+ul{
+    list-style-type: none;
+}
+
+   
+@media (max-width:500px){
+                
+    header{
+        flex-direction: column;
+        border-bottom: 0.1em solid #fff;
+    }
+        
+    header h1{
+        color: white;
+        font-size: 35px;
+        padding-top: 10px;
+        display: flex;
+        align-self: center;
+        opacity: 0.4;
+    }
+    
+    
+    ul{
+        justify-content: center;
+        flex-wrap: wrap;
+     }
+    
+    li{
+        text-align: center;
+        margin: 5px ;
+        padding: 7px;
+    }
+    
+    nav{
+        justify-content: center;
+        align-items: center;
+        height: 70px;
+        width: 100%;
+        flex-direction: column;
+    }
+    
+    main{
+        position: relative;
+    }
+    
+    main::before{
+        content:"";
+        background-image: url('assets/prada.jpg');
+        background-size: 100%;
+        background-repeat: no-repeat;
+        opacity: 1;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 530px;
+        z-index: -1;
+        border-bottom: 2px  solid rgb(2, 2, 2, 0.9);
+    }
+       
+    .text-overlay {
+        position: relative;
+        z-index: 1; 
+        text-align: center;
+        padding: 10px; 
+        color: white; 
+        font-size: medium;
+    }
+    .text-overlay p{
+        position: relative;
+        padding-right: 30px;
+    }
+    
+    .text-overlay2 {
+        position: relative;
+        z-index: 1;
+        text-align: center;
+        color: red;
+        font-size: small;
+        padding-top: 240px;
+        padding-right: 5px;
+    }
+    
+    .monthly-payment{
+        background: rgba(82, 20, 20, 0.048);
+        opacity: 0.5;
+        color: #fff;
+        border-radius: 10%;
+        font-size: 13px;
+        font-weight: 200;
+    }
+
+    .section-brand{
+        margin-top: 75px;
+        text-align: center;
+        border-bottom: 1px solid grey;
+        background-color: rgb(228, 215, 199, 0.6); 
+        /* background: linear-gradient(180deg, rgba(2, 2, 2, 0.9) 50%, rgba(158,189,195,1) 50%); */
+        /* background-color: rgb(2, 2, 2, 0.9); */
+        justify-content: space-evenly;
+    }
+
+    .brands ul{
+        font-size: 14px; 
+        text-decoration: 1 px solid black; 
+        font-weight: bold;
+        text-decoration-line: underline;
+    }
+    ul a{
+        color: black;
+    }
+    .brands ul li:nth-child(1),
+    .brands ul li:nth-child(3),
+    .brands ul li:nth-child(5){
+        font-size: 18px;
+        font-weight: bolder;
+    }
+    .brands-text{
+        justify-content: center;
+        text-decoration-line: overline;
+        color: black;
+        padding-bottom: 10px;
+    }
+
+ 
+    .top-sellers{
+        justify-content:center; 
+        text-align: center;
+        padding: 20px;
+        background: linear-gradient(90deg, rgba(158,189,195,1) 14%, rgba(207,224,219,1) 50%, rgba(158,189,195,1) 77%);
+    }
+    .top-sellers h1{
+        align-self: center;
+        padding-top: 20px;
+    }
+    .perfume-container{
+        display: flex;
+        text-align: center;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .perfume{
+        display:inline-block;
+        width: 100%;
+        height: auto;
+        margin: 10px auto;
+        padding: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        justify-content: space-evenly;
+    }
+    .perfume img {
+        max-width: 100%;
+    }
+    .top-sellers h3{
+        margin: 10px 0;
+    }
+    .top-sellers button {
+        background-color: #ff6600;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+    }
+    button:hover {
+        background-color: #ff3300;
+    }
+
+    .incoming-fr{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        background-color: #f8f8f8;
+        flex-wrap: wrap;
+    }
+
+    
+    
+    .fragrances-text{
+        flex: 1;
+        padding: 20px;
+        height: 347px;
+        background-color: antiquewhite;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        width: 50%;
+    }
+    .fragrances-text h3 {
+        margin: 0;
+    }
+    .fragrances-text a{
+        color: black;
+    }
+    .fragrances-image{
+        display: flex;
+        flex: 1;
+        align-items: center;
+    }
+      
+    .fragrances-image img {
+        max-width: 100%;
+        height: 347px;
+    } 
+
+
+    .catalog{
+        display: flex; 
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        background: linear-gradient(90deg, rgba(158,189,195,1) 14%, rgba(207,224,219,1) 50%, rgba(158,189,195,1) 77%);
+    }
+    .catalog img {
+        max-width: 100%;
+        border-radius: 10px;
+    }
+    .catalog div{
+        display:inline-block;
+        width: 100%;
+        height: auto;
+        margin: 10px auto;
+        padding: 10px;
+        justify-content: space-evenly;
+        border-radius: 10px;
+    }
+    .catalog div p{
+        font-weight: bold;
+        font-size: 20px;
+    }
+
+
+    .quote{
+        display: inline-block;
+    }
+    blockquote{
+        text-align: center;
+        text-transform: capitalize;
+        font-style: italic;
+        padding:10px 0;
+    }
+
+    footer{
+        display: flex;
+        background: black;
+        height: auto;
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+    }
+    .contact{
+        display: inline-block;
+        color: #fff;
+        text-align: center;
+        padding:20px 0;
+    }
+    .contact a{
+        color: #fff;
+    }
+
+
+}
+
+
+@media (min-width:501px){
+                
+    header{
+        flex-direction: row;
+        border-bottom: 0.1em solid #fff;
+    }
+    .logo{
+        color: white;
+        font-size: 35px;
+        padding:30px 0;
+        margin-left: 40px;
+        display: flex;
+        text-align: center;
+        opacity: 0.4;
+    }
+    header ul{
+        width: 80%;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+     }   
+    li{
+        font-size: 15px;
+    }
+    nav{
+        justify-content: flex-end;
+        align-items: center;
+        width: 100%;
+        flex-direction: row;
+    }
+
+    
+    main{
+        position: relative;
+    }
+    main::before{
+        content:"";
+        background-image: url('assets/prada.jpg');
+        background-size:100%;
+        background-position:center;
+        background-repeat: no-repeat;
+        opacity: 0.9;
+        position:absolute;
+        top:0;
+        left: 0;
+        width: 100%;
+        height: 595px;
+        z-index: -1;
+        border-bottom: 2px  solid rgb(2, 2, 2, 0.9);
+    }
+       
+    .text-overlay {
+        position: relative;
+        z-index: 1; 
+        text-align: center;
+        padding: 10px; 
+        color: white; 
+        font-size: medium;
+    }
+    .text-overlay p{
+        position: relative;
+        padding-right: 30px;
+    }
+    
+    .text-overlay2 {
+        position: relative;
+        z-index: 1;
+        text-align: center;
+        color: red;
+        font-size: small;
+        padding-top: 295px;
+        padding-right: 5px;
+    }
+    
+    .monthly-payment{
+        background: rgba(82, 20, 20, 0.048);
+        opacity: 0.5;
+        color: #fff;
+        border-radius: 10%;
+        font-size: 13px;
+        font-weight: 200;
+    }
+
+    .section-brand{
+        margin-top: 85px;
+        text-align: center;
+        border-bottom: 1px solid grey;
+        background-color: rgb(228, 215, 199, 0.6);         
+        justify-content: space-evenly;
+    }
+
+    .brands ul{
+        justify-content: space-evenly;
+        padding:20px 0;
+    }
+    ul a{
+        color: black;
+    }
+    .brands ul li:nth-child(1),
+    .brands ul li:nth-child(3),
+    .brands ul li:nth-child(5){
+        font-size: 18px;
+        font-weight: bolder;
+    }
+    .brands-text{
+        justify-content: center;
+        text-decoration-line: overline;
+        color: black;
+        padding-bottom: 10px;
+    }
+
+ 
+    .top-sellers{
+        justify-content:center; 
+        text-align: center;
+        padding: 20px;
+        background: linear-gradient(90deg, rgba(158,189,195,1) 14%, rgba(207,224,219,1) 50%, rgba(158,189,195,1) 77%);
+    }
+    .top-sellers h1{
+        align-self: center;
+        padding-top: 15px;
+    }
+    .perfume-container{
+        display: flex;
+        text-align: center;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+    .perfume{
+        display:inline-block;
+        width: 30%;
+        height: auto;
+        margin: 10px auto;
+        padding: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        justify-content: space-evenly;
+    }
+    .perfume img {
+        max-width: 100%;
+    }
+    .top-sellers h3{
+        margin: 10px 0;
+    }
+    .top-sellers button {
+        background-color: #ff6600;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        margin-top: 5px;
+        cursor: pointer;
+    }
+    button:hover {
+        background-color: #ff3300;
+    }
+
+    .incoming-fr{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        background-color: #f8f8f8;
+    }
+
+    .fragrances-text{
+        flex: 1;
+        padding: 20px;
+        height: 637px;
+        background-color: antiquewhite;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        max-width: 100%;
+        text-align: center;
+    }
+    .fragrances-text h3 {
+        margin: 0;
+    }
+    .fragrances-text a{
+        color: black;
+    }
+    .fragrances-image {
+        flex: 1;
+    }
+      
+    .fragrances-image img {
+        max-width:  100%;
+        height: 637px;
+    }
+
+
+    .catalog{
+        height: 60vh;
+        display: flex; 
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        background: linear-gradient(90deg, rgba(158,189,195,1) 14%, rgba(207,224,219,1) 50%, rgba(158,189,195,1) 77%);
+    }
+    .catalog img {
+        max-width: 100%;
+        border-radius: 10px;
+    }
+    .catalog div{
+        display:inline-block;
+        width: 33.3%;
+        height: auto;
+        margin: 10px auto;
+        padding: 10px;
+        justify-content: space-evenly;
+        border-radius: 10px;
+    }
+    .catalog div p{
+        font-weight: bold;
+        font-size: 20px;
+    }
+
+
+    .quote{
+        display: block;
+    }
+    blockquote{
+        text-align: center;
+        text-transform: capitalize;
+        font-style: italic;
+        padding:10px 0;
+        font-weight: bold;
+    }
+
+    footer{
+        display: flex;
+        background: black;
+        height: auto;
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+    }
+    .contact{
+        display: inline-block;
+        color: #fff;
+        text-align: center;
+        padding:20px 0;
+    }
+    .contact a{
+        color: #fff;
+    }
+
+}
+
+
+@media (min-width:901px){
+                
+    header{
+        flex-direction: row;
+        border-bottom: 0.1em solid #fff;
+    }
+    .logo{
+        color: white;
+        font-size: 35px;
+        padding:10px 40px;
+        margin-left: 40px;
+        display: flex;
+        text-align: center;
+        opacity: 0.4;
+    }
+    header ul{
+        width: 90%;
+        justify-content: space-evenly;
+        padding-left: 300px;
+     }   
+    li{
+        font-size: 15px;
+    }
+    nav{
+        justify-content: flex-end;
+        align-items: center;
+        width: 100%;
+        flex-direction: row;
+    }
+
+    
+    main{
+        position: relative;
+    }
+    main::before{
+        content:"";
+        background-image: url('assets/prada.jpg');
+        background-size:100%;
+        background-position:center;
+        background-repeat: no-repeat;
+        opacity: 1;
+        position:absolute;
+        padding-top: 1020px;
+        top:0;
+        left: 0;
+        width: 100%;
+        height: 360px;
+        z-index: -1;
+        border-bottom: 2px  solid rgb(2, 2, 2, 0.9);
+    }
+       
+    .text-overlay {
+        position: relative;
+        z-index: 1; 
+        text-align: center;
+        padding: 10px; 
+        color: white; 
+        font-size: medium;
+    }
+    .text-overlay p{
+        position: relative;
+        padding-right: 30px;
+    }
+    
+    .text-overlay2 {
+        position: realative;
+        z-index: 1;
+        text-align: center;
+        color: red;
+        font-size: 25px;
+        padding-top: 1085px;
+        padding-right: 5px;
+    }
+    
+    .monthly-payment{
+        background: rgba(82, 20, 20, 0.048); 
+        opacity: 0.5;
+        color: white;
+        border-radius: 10%;
+        font-size: 13px;
+        font-weight: 200;
+    }
+
+    .section-brand{
+        margin-top: 77px;
+        text-align: center;
+        border-bottom: 1px solid grey;
+        background-color: rgb(228, 215, 199, 0.6); 
+        /* background: linear-gradient(180deg, rgba(2, 2, 2, 0.9) 50%, rgba(158,189,195,1) 50%); */
+        /* background-color: rgb(2, 2, 2, 0.9); */
+        justify-content: space-evenly;
+    }
+
+    .brands ul{
+        justify-content: space-evenly;
+        /* font-weight: bold; */
+        padding:20px 0;
+    }
+    ul a{
+        color: black;
+    }
+    .brands ul li:nth-child(1),
+    .brands ul li:nth-child(3),
+    .brands ul li:nth-child(5){
+        font-size: 18px;
+        font-weight: bolder;
+    }
+    .brands-text{
+        justify-content: center;
+        text-decoration-line: overline;
+        color: black;
+        padding-bottom: 10px;
+    }
+
+ 
+    .top-sellers{
+        justify-content:center; 
+        text-align: center;
+        padding: 20px;
+        background: linear-gradient(90deg, rgba(158,189,195,1) 14%, rgba(207,224,219,1) 50%, rgba(158,189,195,1) 77%);
+    }
+    .top-sellers h1{
+        align-self: center;
+        padding-top: 15px;
+    }
+    .perfume-container{
+        display: flex;
+        text-align: center;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+    .perfume{
+        display:inline-block;
+        width: 30%;
+        height: auto;
+        margin: 10px auto;
+        padding: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        justify-content: space-evenly;
+        border-radius: 10px;
+    }
+    .perfume img {
+        max-width: 100%;
+        border-radius: 10px;
+    }
+    .top-sellers h3{
+        margin: 10px 0;
+
+    }
+    .top-sellers button {
+        background-color: #ff6600;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        margin-top: 5px;
+        cursor: pointer;
+    }
+    button:hover {
+        background-color: #ff3300;
+    }
+
+    .incoming-fr{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        background-color: #f8f8f8;
+    }
+
+    .fragrances-text{
+        flex: 1;
+        padding:20px;
+        height: 1200px;
+        background-color: antiquewhite;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        max-width: 100%;
+        text-align: center;
+    }
+    .fragrances-text h3 {
+        margin: 0;
+    }
+    .fragrances-text a{
+        color: black;
+    }
+    .fragrances-image {
+        flex: 1;
+    }
+      
+    .fragrances-image img {
+        max-width:  100%;
+        height: 1200px;
+        object-fit: cover;
+    }
+
+
+    .catalog{
+        height: 60vh;
+        display: flex; 
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        background: linear-gradient(90deg, rgba(158,189,195,1) 14%, rgba(207,224,219,1) 50%, rgba(158,189,195,1) 77%);
+    }
+    .catalog img {
+        max-width: 100%;
+        border-radius: 10px;
+    }
+    .catalog div{
+        display:inline-block;
+        width: 33.3%;
+        height: auto;
+        margin: 10px auto;
+        padding: 10px;
+        justify-content: space-evenly;
+        border-radius: 10px;
+    }
+    .catalog div p{
+        font-weight: bold;
+        font-size: 20px;
+    }
+
+
+    .quote{
+        display: block;
+    }
+    blockquote{
+        text-align: center;
+        text-transform: capitalize;
+        font-style: italic;
+        padding:10px 0;
+        font-weight: bold;
+    }
+
+    footer{
+        display: flex;
+        background: black;
+        height: auto;
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+    }
+    .contact{
+        display: inline-block;
+        color: #fff;
+        text-align: center;
+        padding:20px 0;
+    }
+    .contact a{
+        color: #fff;
+    }
+}
